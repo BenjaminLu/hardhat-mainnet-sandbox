@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  hardhat-mainnet-sandbox:
+    build: ./docker
+    working_dir: /root/hardhat-mainnet-sandbox
+    image: hardhat-mainnet-sandbox:1.0.0
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+    command:
+      - sh
+      - ./entrypoint.sh
