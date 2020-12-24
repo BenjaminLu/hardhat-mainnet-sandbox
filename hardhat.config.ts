@@ -26,7 +26,7 @@ module.exports = {
     },
     hardhat: {    
       forking: {
-        url: "https://eth-mainnet.alchemyapi.io/v2/-mD5an7JQQO5UVge_cuPPyouem4VTn_S",
+        url: process.env.PROVIDER_URL,
       },
     }
   },

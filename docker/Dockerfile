@@ -25,4 +25,4 @@ RUN apt update && \
 
 # CMD ["npm", "test"]
 # CMD ["tail", "-f", "/dev/null"]
-CMD ["sh" "./entrypoint.sh"]
+CMD ["/bin/sh" "./entrypoint.sh"]

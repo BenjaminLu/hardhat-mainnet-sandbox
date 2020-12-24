@@ -3,6 +3,8 @@ version: '3.4'
 services:
   hardhat-mainnet-sandbox:
     build: ./docker
+    env_file:
+      - .env
     working_dir: /root/hardhat-mainnet-sandbox
     image: hardhat-mainnet-sandbox:1.0.0
     ports:
