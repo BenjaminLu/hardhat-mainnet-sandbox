@@ -7,7 +7,6 @@ services:
     image: hardhat-mainnet-sandbox:1.0.0
     ports:
       - "8545:8545"
-      - "8546:8546"
     command:
       - sh
       - ./entrypoint.sh
