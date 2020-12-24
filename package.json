@@ -1,0 +1,39 @@
+{
+  "name": "hardhat-mainnet-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "console": "npx hardhat --network hardhat console",
+    "accounts": "npx hardhat --network hardhat accounts",
+    "node": "npx hardhat --network hardhat node",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenjaminLu/hardhat-mainnet-sandbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenjaminLu/hardhat-mainnet-sandbox/issues"
+  },
+  "homepage": "https://github.com/BenjaminLu/hardhat-mainnet-sandbox#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.16",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.2.1",
+    "ethers": "^5.0.24",
+    "hardhat": "^2.0.6",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "web3-providers-ws": "^1.3.1"
+  }
+}
