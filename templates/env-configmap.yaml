@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  PROVIDER_URL: https://eth-mainnet.alchemyapi.io/v2/-mD5an7JQQO5UVge_cuPPyouem4VTn_S
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: hardhat-mainnet-sandbox-env
+  name: env

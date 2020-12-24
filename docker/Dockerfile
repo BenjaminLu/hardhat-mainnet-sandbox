@@ -21,8 +21,7 @@ RUN apt update && \
     npm install && \
     ln -s /root/.nvm/versions/node/v$NODE_VERSION/bin/node /usr/bin/node && \
     ln -s /root/.nvm/versions/node/v$NODE_VERSION/bin/npm /usr/bin/npm && \
-    ln -s /root/.nvm/versions/node/v$NODE_VERSION/bin/npx /usr/bin/npx
+    ln -s /root/.nvm/versions/node/v$NODE_VERSION/bin/npx /usr/bin/npx && \
+    chmod +x /root/hardhat-mainnet-sandbox/entrypoint.sh
 
-# CMD ["npm", "test"]
-# CMD ["tail", "-f", "/dev/null"]
-CMD ["/bin/sh" "./entrypoint.sh"]
+CMD ["/root/hardhat-mainnet-sandbox/entrypoint.sh"]
