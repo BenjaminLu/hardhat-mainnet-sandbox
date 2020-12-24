@@ -6,4 +6,4 @@ metadata:
   creationTimestamp: null
   labels:
     io.kompose.service: hardhat-mainnet-sandbox-env
-  name: env
+  name: hardhat-mainnet-sandbox-env

@@ -32,7 +32,7 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   key: PROVIDER_URL
-                  name: env
+                  name: hardhat-mainnet-sandbox-env
           image: benjaminlu/hardhat-mainnet-sandbox:1.0.0
           name: hardhat-mainnet-sandbox
           ports:
