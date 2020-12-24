@@ -6,6 +6,7 @@ WORKDIR /root/hardhat-mainnet-sandbox
 SHELL ["/bin/bash", "-c"]
 
 ENV NODE_VERSION 10.15.3
+EXPOSE 8545
 
 RUN apt update && \
     apt install -yqq git vim curl build-essential ca-certificates libssl-dev ssh python && \
@@ -24,4 +25,4 @@ RUN apt update && \
 
 # CMD ["npm", "test"]
 # CMD ["tail", "-f", "/dev/null"]
-CMD ["npx", "hardhat", "node"]
+CMD ["sh" "./entrypoint.sh"]
