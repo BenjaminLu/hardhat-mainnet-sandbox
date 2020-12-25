@@ -19,28 +19,36 @@ echo 'PROVIDER_URL=<your_node_provider>' > .env
 docker-compose up hardhat-mainnet-sandbox
 ```
 
-Start from `kubectl` using NodePort mode
+Start from `kubectl` and k8s
 
-```bash
-git clone https://github.com/BenjaminLu/hardhat-mainnet-sandbox.git
+Edit `templates/hardhat-mainnet-sandbox-env-configmap.yaml`
 
-kubectl apply -f templates
+```yaml
+apiVersion: v1
+data:
+  # Change to your provider url
+  PROVIDER_URL: {{ .Values.provider.url }}
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: hardhat-mainnet-sandbox-env
+  name: hardhat-mainnet-sandbox-env
 ```
 
-Edit `templates/hardhat-mainnet-sandbox-service.yaml` if you wanna change the config.
-
-```yml
-ports:
-    - name: "8545"
-      port: 8545
-      targetPort: 8545
-      nodePort: 30000
+```bash
+kubectl apply -f templates/
 ```
 
 Start from `helm`
 
-```bash
-git clone https://github.com/BenjaminLu/hardhat-mainnet-sandbox.git
+Edit provider url in `values.yaml`.
 
+```yaml
+provider:
+  url: <your_node_provider>
+```
+
+```bash
 helm install hardhat-mainnet-sandbox .
 ```
